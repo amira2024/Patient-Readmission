@@ -1,10 +1,12 @@
+
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
-
-dfHD = pd.read_csv('\data\healthcare_dataset.csv')
+dfHD = pd.read_csv("data/raw/healthcare_dataset.csv")
 
 print("Dataset Shape:", dfHD.shape) #Returns a tuple (how many rows, how many columns)
 print("\nData Types:") #Data types of each column
@@ -30,7 +32,7 @@ plt.title('Distribution of Length of Stay')
 plt.xlabel('Days')
 plt.savefig('length_of_stay_distribution.png')
 
-# Medical condition distribution
+
 plt.figure(figsize=(12, 8))
 condition_counts = dfHD['Medical Condition'].value_counts().head(10)
 sns.barplot(x=condition_counts.values, y=condition_counts.index)

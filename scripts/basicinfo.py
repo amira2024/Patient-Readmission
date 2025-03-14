@@ -13,21 +13,17 @@ print(dfHD.dtypes)
 print("\nMissing Values:")
 print(dfHD.isnull().sum())
 
-# Summary statistics
 print("\nSummary Statistics:")
 print(dfHD.describe())
 
-# Sample data
 print("\nSample Data:")
 print(dfHD.head())
 
 dfHD['Date of Admission'] = pd.to_datetime(dfHD['Date of Admission'])
 dfHD['Discharge Date'] = pd.to_datetime(dfHD['Discharge Date'])
 
-# Calculate length of stay
 dfHD['Length of Stay'] = (dfHD['Discharge Date'] - dfHD['Date of Admission']).dt.days
 
-#  visualization
 plt.figure(figsize=(10, 6))
 sns.histplot(dfHD['Length of Stay'])
 plt.title('Distribution of Length of Stay')

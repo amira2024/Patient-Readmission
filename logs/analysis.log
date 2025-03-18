@@ -1,0 +1,6 @@
+2025-03-17 20:35:48,826 - __main__ - WARNING - Config file config/database.yaml not found, using default
+2025-03-17 20:35:48,850 - __main__ - ERROR - Error connecting to MySQL: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-17 20:35:48,851 - __main__ - ERROR - Error in analysis process: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-17 20:35:56,830 - __main__ - WARNING - Config file config/database.yaml not found, using default
+2025-03-17 20:35:56,841 - __main__ - ERROR - Error connecting to MySQL: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-17 20:35:56,841 - __main__ - ERROR - Error in analysis process: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)

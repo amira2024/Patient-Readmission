@@ -1,0 +1,5 @@
+host: localhost
+database: healthcare_readmission
+user: your_username
+password: your_password
+port: 3306

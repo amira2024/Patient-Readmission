@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS healthcare_readmission;
 USE healthcare_readmission;
 
 -- Patient demographics table
-CREATE TABLE IF NOT EXISTS patients (
+CREATE TABLE IF NOT EXISTS patients ( 
     patient_id VARCHAR(20) PRIMARY KEY,
     age INT NOT NULL,
     gender VARCHAR(10) NOT NULL,
@@ -25,6 +25,8 @@ CREATE TABLE IF NOT EXISTS hospital_stays (
     length_of_stay INT,
     admission_type VARCHAR(20),
     discharge_disposition VARCHAR(50),
+
+
     admission_source VARCHAR(50),
     is_readmission BOOLEAN DEFAULT FALSE,
     previous_stay_id VARCHAR(20),

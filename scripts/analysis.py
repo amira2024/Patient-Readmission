@@ -639,7 +639,10 @@ def main():
         
         return 0
     except Exception as e:
+        import traceback
         logger.error(f"Error in analysis process: {str(e)}")
+        logger.error("Detailed traceback:")
+        logger.error(traceback.format_exc())
         return 1
 
 

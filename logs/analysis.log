@@ -4,3 +4,242 @@
 2025-03-17 20:35:56,830 - __main__ - WARNING - Config file config/database.yaml not found, using default
 2025-03-17 20:35:56,841 - __main__ - ERROR - Error connecting to MySQL: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
 2025-03-17 20:35:56,841 - __main__ - ERROR - Error in analysis process: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-17 20:52:44,438 - __main__ - ERROR - Error connecting to MySQL: 1045 (28000): Access denied for user 'your_username'@'localhost' (using password: YES)
+2025-03-17 20:52:44,439 - __main__ - ERROR - Error in analysis process: 1045 (28000): Access denied for user 'your_username'@'localhost' (using password: YES)
+2025-03-17 23:28:53,291 - __main__ - ERROR - Error in analysis process: argument 3 must be str or None, not int
+2025-03-17 23:31:59,672 - __main__ - ERROR - Error connecting to MySQL: 1045 (28000): Access denied for user 'your_username'@'localhost' (using password: YES)
+2025-03-17 23:31:59,672 - __main__ - ERROR - Error in analysis process: 1045 (28000): Access denied for user 'your_username'@'localhost' (using password: YES)
+2025-03-17 23:32:21,354 - __main__ - ERROR - Error connecting to MySQL: 1045 (28000): Access denied for user 'your_username'@'localhost' (using password: YES)
+2025-03-17 23:32:21,354 - __main__ - ERROR - Error in analysis process: 1045 (28000): Access denied for user 'your_username'@'localhost' (using password: YES)
+2025-03-17 23:32:29,380 - __main__ - ERROR - Error in analysis process: argument 3 must be str or None, not int
+2025-03-17 23:36:52,235 - __main__ - ERROR - Error in analysis process: argument 3 must be str or None, not int
+2025-03-17 23:36:52,235 - __main__ - ERROR - Detailed traceback:
+2025-03-17 23:36:52,248 - __main__ - ERROR - Traceback (most recent call last):
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 614, in main
+    db_connector = DatabaseConnector(config_file=args.config)
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 71, in __init__
+    self._connect()
+    ~~~~~~~~~~~~~^^
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 98, in _connect
+    self.connection = mysql.connector.connect(
+                      ~~~~~~~~~~~~~~~~~~~~~~~^
+        host=self.config.get('host', 'localhost'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        port=self.config.get('port', 3306)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 153, in __init__
+    self.connect(**kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\abstracts.py", line 1529, in connect
+    self._open_connection()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 365, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+TypeError: argument 3 must be str or None, not int
+
+2025-03-17 23:37:11,056 - __main__ - ERROR - Error in analysis process: argument 3 must be str or None, not int
+2025-03-17 23:37:11,056 - __main__ - ERROR - Detailed traceback:
+2025-03-17 23:37:11,058 - __main__ - ERROR - Traceback (most recent call last):
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 614, in main
+    db_connector = DatabaseConnector(config_file=args.config)
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 71, in __init__
+    self._connect()
+    ~~~~~~~~~~~~~^^
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 98, in _connect
+    self.connection = mysql.connector.connect(
+                      ~~~~~~~~~~~~~~~~~~~~~~~^
+        host=self.config.get('host', 'localhost'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        port=self.config.get('port', 3306)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 153, in __init__
+    self.connect(**kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\abstracts.py", line 1529, in connect
+    self._open_connection()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 365, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+TypeError: argument 3 must be str or None, not int
+
+2025-03-17 23:39:35,949 - __main__ - ERROR - Error in analysis process: argument 3 must be str or None, not int
+2025-03-17 23:39:35,950 - __main__ - ERROR - Detailed traceback:
+2025-03-17 23:39:35,952 - __main__ - ERROR - Traceback (most recent call last):
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 614, in main
+    db_connector = DatabaseConnector(config_file=args.config)
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 71, in __init__
+    self._connect()
+    ~~~~~~~~~~~~~^^
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 98, in _connect
+    self.connection = mysql.connector.connect(
+                      ~~~~~~~~~~~~~~~~~~~~~~~^
+        host=self.config.get('host', 'localhost'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        port=str(self.config.get('port', 3306))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 153, in __init__
+    self.connect(**kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\abstracts.py", line 1529, in connect
+    self._open_connection()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 365, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+TypeError: argument 3 must be str or None, not int
+
+2025-03-17 23:43:28,326 - __main__ - ERROR - Error in analysis process: argument 3 must be str or None, not int
+2025-03-17 23:43:28,326 - __main__ - ERROR - Detailed traceback:
+2025-03-17 23:43:28,328 - __main__ - ERROR - Traceback (most recent call last):
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 620, in main
+    db_connector = DatabaseConnector(config_file=args.config)
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 71, in __init__
+    self._connect()
+    ~~~~~~~~~~~~~^^
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 104, in _connect
+    self.connection = mysql.connector.connect(
+                      ~~~~~~~~~~~~~~~~~~~~~~~^
+        host=host,
+        ^^^^^^^^^^
+    ...<3 lines>...
+        port=port_str
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 153, in __init__
+    self.connect(**kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\abstracts.py", line 1529, in connect
+    self._open_connection()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 365, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+TypeError: argument 3 must be str or None, not int
+
+2025-03-17 23:44:51,736 - __main__ - ERROR - Error in analysis process: argument 3 must be str or None, not int
+2025-03-17 23:44:51,736 - __main__ - ERROR - Detailed traceback:
+2025-03-17 23:44:51,738 - __main__ - ERROR - Traceback (most recent call last):
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 614, in main
+    db_connector = DatabaseConnector(config_file=args.config)
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 71, in __init__
+    self._connect()
+    ~~~~~~~~~~~~~^^
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 98, in _connect
+    self.connection = mysql.connector.connect(
+                      ~~~~~~~~~~~~~~~~~~~~~~~^
+        host=self.config.get('host', 'localhost'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    
+    
+    )
+    ^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 153, in __init__
+    self.connect(**kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\abstracts.py", line 1529, in connect
+    self._open_connection()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 365, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+TypeError: argument 3 must be str or None, not int
+
+2025-03-17 23:47:45,577 - mysql.connector.authentication - INFO - package: mysql.connector.plugins
+2025-03-17 23:47:45,577 - mysql.connector.authentication - INFO - plugin_name: caching_sha2_password
+2025-03-17 23:47:45,578 - mysql.connector.authentication - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-03-17 23:47:45,580 - __main__ - ERROR - Error connecting to MySQL: Failed authentication: object supporting the buffer API required
+2025-03-17 23:47:45,580 - __main__ - ERROR - Error in analysis process: Failed authentication: object supporting the buffer API required
+2025-03-17 23:47:45,580 - __main__ - ERROR - Detailed traceback:
+2025-03-17 23:47:45,583 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\protocol.py", line 102, in _auth_response
+    plugin_auth_response = auth.auth_response()
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\plugins\__init__.py", line 102, in auth_response
+    return self.prepare_password()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\plugins\caching_sha2_password.py", line 98, in prepare_password
+    return self._scramble()
+           ~~~~~~~~~~~~~~^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\plugins\caching_sha2_password.py", line 74, in _scramble
+    hash1 = sha256(password).digest()
+            ~~~~~~^^^^^^^^^^
+TypeError: object supporting the buffer API required
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 614, in main
+    db_connector = DatabaseConnector(config_file=args.config)
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 71, in __init__
+    self._connect()
+    ~~~~~~~~~~~~~^^
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 98, in _connect
+    self.connection = mysql.connector.connect(
+                      ~~~~~~~~~~~~~~~~~~~~~~~^
+        host=self.config.get('host', 'localhost'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        port=self.config.get('port', 3306)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 294, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection.py", line 167, in __init__
+    self.connect(**kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\abstracts.py", line 1178, in connect
+    self._open_connection()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection.py", line 573, in _open_connection
+    self._do_auth(
+    ~~~~~~~~~~~~~^
+        self._user,
+        ^^^^^^^^^^^
+    ...<5 lines>...
+        self._conn_attrs,
+        ^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection.py", line 299, in _do_auth
+    packet = self._protocol.make_auth(
+        handshake=self._handshake,
+    ...<8 lines>...
+        auth_plugin_class=self._auth_plugin_class,
+    )
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\protocol.py", line 160, in make_auth
+    packet += self._auth_response(
+              ~~~~~~~~~~~~~~~~~~~^
+        client_flags,
+        ^^^^^^^^^^^^^
+    ...<6 lines>...
+        ssl_enabled,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\protocol.py", line 107, in _auth_response
+    raise InterfaceError(f"Failed authentication: {err}") from err
+mysql.connector.errors.InterfaceError: Failed authentication: object supporting the buffer API required
+

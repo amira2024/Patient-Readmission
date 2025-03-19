@@ -243,3 +243,264 @@ Traceback (most recent call last):
     raise InterfaceError(f"Failed authentication: {err}") from err
 mysql.connector.errors.InterfaceError: Failed authentication: object supporting the buffer API required
 
+2025-03-18 20:41:09,655 - __main__ - ERROR - Error connecting to MySQL: 1045 (28000): Access denied for user 'your_username'@'localhost' (using password: YES)
+2025-03-18 20:41:09,655 - __main__ - ERROR - Error in analysis process: 1045 (28000): Access denied for user 'your_username'@'localhost' (using password: YES)
+2025-03-18 20:41:09,655 - __main__ - ERROR - Detailed traceback:
+2025-03-18 20:41:09,666 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 365, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+_mysql_connector.MySQLInterfaceError: Access denied for user 'your_username'@'localhost' (using password: YES)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 614, in main
+    db_connector = DatabaseConnector(config_file=args.config)
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 71, in __init__
+    self._connect()
+    ~~~~~~~~~~~~~^^
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 98, in _connect
+    self.connection = mysql.connector.connect(
+                      ~~~~~~~~~~~~~~~~~~~~~~~^
+        host=self.config.get('host', 'localhost'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        port=self.config.get('port', 3306)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 153, in __init__
+    self.connect(**kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\abstracts.py", line 1529, in connect
+    self._open_connection()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 370, in _open_connection
+    raise get_mysql_exception(
+        msg=err.msg, errno=err.errno, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'your_username'@'localhost' (using password: YES)
+
+2025-03-18 20:41:25,221 - __main__ - ERROR - Error in analysis process: argument 3 must be str or None, not int
+2025-03-18 20:41:25,221 - __main__ - ERROR - Detailed traceback:
+2025-03-18 20:41:25,223 - __main__ - ERROR - Traceback (most recent call last):
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 614, in main
+    db_connector = DatabaseConnector(config_file=args.config)
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 71, in __init__
+    self._connect()
+    ~~~~~~~~~~~~~^^
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 98, in _connect
+    self.connection = mysql.connector.connect(
+                      ~~~~~~~~~~~~~~~~~~~~~~~^
+        host=self.config.get('host', 'localhost'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        port=self.config.get('port', 3306)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 153, in __init__
+    self.connect(**kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\abstracts.py", line 1529, in connect
+    self._open_connection()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 365, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+TypeError: argument 3 must be str or None, not int
+
+2025-03-18 20:43:14,272 - __main__ - ERROR - Error in analysis process: print() got an unexpected keyword argument 'host'
+2025-03-18 20:43:14,273 - __main__ - ERROR - Detailed traceback:
+2025-03-18 20:43:14,274 - __main__ - ERROR - Traceback (most recent call last):
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 614, in main
+    db_connector = DatabaseConnector(config_file=args.config)
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 71, in __init__
+    self._connect()
+    ~~~~~~~~~~~~~^^
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 98, in _connect
+    print(
+    ~~~~~^
+        host=self.config.get('host', 'localhost'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        port=self.config.get('port', 3306)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: print() got an unexpected keyword argument 'host'
+
+2025-03-18 20:44:33,779 - __main__ - ERROR - Error in analysis process: argument 3 must be str or None, not int
+2025-03-18 20:44:33,779 - __main__ - ERROR - Detailed traceback:
+2025-03-18 20:44:33,781 - __main__ - ERROR - Traceback (most recent call last):
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 616, in main
+    db_connector = DatabaseConnector(config_file=args.config)
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 71, in __init__
+    self._connect()
+    ~~~~~~~~~~~~~^^
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 99, in _connect
+    self.connection = mysql.connector.connect(
+                      ~~~~~~~~~~~~~~~~~~~~~~~^
+        host=self.config.get('host', 'localhost'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        port=self.config.get('port', 3306)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 153, in __init__
+    self.connect(**kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\abstracts.py", line 1529, in connect
+    self._open_connection()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 365, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+TypeError: argument 3 must be str or None, not int
+
+2025-03-18 20:44:49,291 - __main__ - ERROR - Error in analysis process: argument 3 must be str or None, not int
+2025-03-18 20:44:49,291 - __main__ - ERROR - Detailed traceback:
+2025-03-18 20:44:49,293 - __main__ - ERROR - Traceback (most recent call last):
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 616, in main
+    db_connector = DatabaseConnector(config_file=args.config)
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 71, in __init__
+    self._connect()
+    ~~~~~~~~~~~~~^^
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 99, in _connect
+    self.connection = mysql.connector.connect(
+                      ~~~~~~~~~~~~~~~~~~~~~~~^
+        host=self.config.get('host', 'localhost'),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        port=self.config.get('port', 3306)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 153, in __init__
+    self.connect(**kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\abstracts.py", line 1529, in connect
+    self._open_connection()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 365, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+TypeError: argument 3 must be str or None, not int
+
+2025-03-18 20:55:24,350 - __main__ - INFO - Connection parameters:
+2025-03-18 20:55:24,351 - __main__ - INFO - Host: localhost, Type: <class 'str'>
+2025-03-18 20:55:24,351 - __main__ - INFO - Database: healthcare_readmission, Type: <class 'str'>
+2025-03-18 20:55:24,351 - __main__ - INFO - User: root, Type: <class 'str'>
+2025-03-18 20:55:24,351 - __main__ - INFO - Password: *****, Type: <class 'int'>
+2025-03-18 20:55:24,351 - __main__ - INFO - Port: 3306, Type: <class 'int'>
+2025-03-18 20:55:24,363 - __main__ - ERROR - Error connecting to MySQL: 1049 (42000): Unknown database 'healthcare_readmission'
+2025-03-18 20:55:24,365 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 365, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+_mysql_connector.MySQLInterfaceError: Unknown database 'healthcare_readmission'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 113, in _connect
+    self.connection = mysql.connector.connect(
+                      ~~~~~~~~~~~~~~~~~~~~~~~^
+        host=str(host),
+        ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        port=str(port)
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 153, in __init__
+    self.connect(**kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\abstracts.py", line 1529, in connect
+    self._open_connection()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 370, in _open_connection
+    raise get_mysql_exception(
+        msg=err.msg, errno=err.errno, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1049 (42000): Unknown database 'healthcare_readmission'
+
+2025-03-18 20:55:24,365 - __main__ - ERROR - Error in analysis process: 1049 (42000): Unknown database 'healthcare_readmission'
+2025-03-18 20:55:24,365 - __main__ - ERROR - Detailed traceback:
+2025-03-18 20:55:24,366 - __main__ - ERROR - Traceback (most recent call last):
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 365, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+_mysql_connector.MySQLInterfaceError: Unknown database 'healthcare_readmission'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 633, in main
+    db_connector = DatabaseConnector(config_file=args.config)
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 71, in __init__
+    self._connect()
+    ~~~~~~~~~~~~~^^
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 113, in _connect
+    self.connection = mysql.connector.connect(
+                      ~~~~~~~~~~~~~~~~~~~~~~~^
+        host=str(host),
+        ^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        port=str(port)
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 153, in __init__
+    self.connect(**kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\abstracts.py", line 1529, in connect
+    self._open_connection()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\celbi\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 370, in _open_connection
+    raise get_mysql_exception(
+        msg=err.msg, errno=err.errno, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1049 (42000): Unknown database 'healthcare_readmission'
+
+2025-03-18 21:18:57,371 - __main__ - INFO - Connected to MySQL Server version 9.2.0
+2025-03-18 21:18:57,372 - __main__ - INFO - Loading data from database
+2025-03-18 21:18:57,373 - __main__ - ERROR - Error executing query: 1146 (42S02): Table 'healthcare_readmission.readmission_analysis' doesn't exist
+2025-03-18 21:18:57,373 - __main__ - WARNING - No readmission data found in database
+2025-03-18 21:18:57,373 - __main__ - ERROR - Error in analysis process: [WinError 3] The system cannot find the path specified: 'data/processed'
+2025-03-18 21:18:57,373 - __main__ - ERROR - Detailed traceback:
+2025-03-18 21:18:57,374 - __main__ - ERROR - Traceback (most recent call last):
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 623, in main
+    df = analyzer.get_readmission_data()
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 161, in get_readmission_data
+    files = [f for f in os.listdir(processed_dir) if f.startswith('ml_features_dataset')]
+                        ~~~~~~~~~~^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'data/processed'
+
+2025-03-18 21:20:12,377 - __main__ - INFO - Connected to MySQL Server version 9.2.0
+2025-03-18 21:20:12,378 - __main__ - INFO - Loading data from database
+2025-03-18 21:20:12,379 - __main__ - ERROR - Error executing query: 1146 (42S02): Table 'healthcare_readmission.readmission_analysis' doesn't exist
+2025-03-18 21:20:12,379 - __main__ - WARNING - No readmission data found in database
+2025-03-18 21:20:12,379 - __main__ - ERROR - Error in analysis process: No readmission data available
+2025-03-18 21:20:12,379 - __main__ - ERROR - Detailed traceback:
+2025-03-18 21:20:12,380 - __main__ - ERROR - Traceback (most recent call last):
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 623, in main
+    df = analyzer.get_readmission_data()
+  File "c:\Users\celbi\OneDrive\Documents\Patient-Readmission\scripts\analysis.py", line 168, in get_readmission_data
+    raise ValueError("No readmission data available")
+ValueError: No readmission data available
+

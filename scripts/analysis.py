@@ -93,23 +93,23 @@ class DatabaseConnector:
             return default_config
     
     def _connect(self) -> None:
-        """Connect to the MySQL database"""
-        try:
-            self.connection = mysql.connector.connect(
-                host=self.config.get('host', 'localhost'),
-                database=self.config.get('database', 'healthcare_readmission'),
-                user=self.config.get('user', 'root'),
-                password=self.config.get('password', ''),
-                port=self.config.get('port', 3306)
-            )
-            
-            if self.connection.is_connected():
-                self.cursor = self.connection.cursor(dictionary=True)
-                db_info = self.connection.get_server_info()
-                logger.info(f"Connected to MySQL Server version {db_info}")
-        except Error as e:
-            logger.error(f"Error connecting to MySQL: {str(e)}")
-            raise
+            """Connect to the MySQL database"""
+            try:
+                self.connection = mysql.connector.connect(
+                    host=self.config.get('host', 'localhost'),
+                    database=self.config.get('database', 'healthcare_readmission'),
+                    user=self.config.get('user', 'root'),
+                    password=self.config.get('password', ''),
+                    port=self.config.get('port', 3306)
+                )
+                
+                if self.connection.is_connected():
+                    self.cursor = self.connection.cursor(dictionary=True)
+                    db_info = self.connection.get_server_info()
+                    logger.info(f"Connected to MySQL Server version {db_info}")
+            except Error as e:
+                logger.error(f"Error connecting to MySQL: {str(e)}")
+                raise
     
     def execute_query(self, query: str, params: Optional[tuple] = None) -> Optional[pd.DataFrame]:
         """Execute a SQL query and return results as a DataFrame"""
